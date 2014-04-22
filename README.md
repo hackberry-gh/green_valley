@@ -13,14 +13,29 @@ production use.
 
 Since it uses gitreceive from @progrium, you need to upload your ssh key to server;
 
-    $ cat ~/.ssh/id_rsa.pub | val@greenvalley.org "sudo GITUSER=val gitreceive upload-key lemmycaution"
+    $ cat ~/.ssh/id_rsa.pub | ssh val@greenvalley.org "sudo GITUSER=val gitreceive upload-key lemmycaution"
 
-on vagrant;
+With vagrant;
 
     $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.vagrant.d/insecure_private_key vagrant@greenvalley.local "sudo GITUSER=val gitreceive upload-key lemmycaution"
+
+## Usage
+
+1) Run bedrock
+
+    $ sudo gv-bedrock run &
+    
+2) Run Valley
+
+    $ sudo gv-valley run &    
+
+3) Viola, now you can deploy your app via git.
+
+run `valley` to see available commands. 
     
 ## Todo
 
+- Write upstart or whatever daemon scripts
 - Write more tests
 - Documentation
 

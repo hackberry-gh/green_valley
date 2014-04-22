@@ -15,6 +15,13 @@ else
     apt-get install -y git make curl software-properties-common python-software-properties
 fi
 
+if command_exists apt-add-repository; then
+    echo "Already have apt-add-repository..."    
+else
+    apt-get update    
+    apt-get install -y software-properties-common python-software-properties    
+fi
+
 if [[ ! $(ruby --version) =~ ([2][.][0-9.]*) ]]; then
     apt-add-repository -y ppa:brightbox/ruby-ng
     apt-get update -y
@@ -29,6 +36,8 @@ fi
 
 [[ -z $(gem list | grep gv-bedrock) ]] && gem install gv-bedrock --no-rdoc --no-ri
 [[ -z $(gem list | grep gv-valley) ]] && gem install gv-valley --no-rdoc --no-ri
+
+curl -O https://raw.githubusercontent.com/hackberry-gh/green_valley/master/Rakefile
 
 echo "Welcome to Valley,"
 echo "Run rake install or rake install:host for runner slaves"
