@@ -7,7 +7,7 @@ production use.
 
 ## Installation
 
-    $ curl https://raw.github.com/green-valley/green_valley/bootstrap.sh | sudo bash
+    $ curl https://github.com/hackberry-gh/green_valley/bootstrap.sh | sudo bash
 
 ## Configuration
 
