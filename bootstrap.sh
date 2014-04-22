@@ -37,7 +37,8 @@ fi
 [[ -z $(gem list | grep gv-bedrock) ]] && gem install gv-bedrock --no-rdoc --no-ri
 [[ -z $(gem list | grep gv-valley) ]] && gem install gv-valley --no-rdoc --no-ri
 
-curl -O https://raw.githubusercontent.com/hackberry-gh/green_valley/master/Rakefile
+git clone https://github.com/hackberry-gh/green_valley.git
+cd green_valley
 
 echo "Welcome to Valley,"
 echo "Run rake install or rake install:host for runner slaves"
