@@ -1,0 +1,9 @@
+[submodule "gv-bedrock"]
+      path = bedrock
+      url = git://github.com/hackberry-gh/gv-bedrock.git
+[submodule "gv-valley"]
+      path = valley
+      url = git://github.com/hackberry-gh/gv-valley.git
+[submodule "gv-common"]
+      path = common
+      url = git://github.com/hackberry-gh/gv-common.git
